@@ -1,0 +1,21 @@
+@use '/src/sass/abstracts' as *;
+
+.eonavbox-container {
+  background-color: $medium-background-color;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 75%;
+  border: solid;
+  border-width: 5px;
+
+  .nav-choices-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+  }
+
+  .nav-search-option-container {
+    flex: 1;
+  }
+}

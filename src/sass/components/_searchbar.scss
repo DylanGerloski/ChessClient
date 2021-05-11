@@ -1,0 +1,28 @@
+.search__bar {
+  display: flex;
+  flex-direction: column;
+
+  &__input[type="text"] {
+    padding: 5px;
+    border-radius: 10px;
+  }
+  &__input:focus {
+    outline: none;
+  }
+  &__input {
+    margin: 0 auto;
+  }
+  .search__bar__results {
+    display: flex;
+    flex-direction: column;
+    height: 30rem;
+    overflow: auto;
+    .name__button {
+      width: 100%;
+
+      &:hover {
+        background-color: rgb(192, 168, 168);
+      }
+    }
+  }
+}
