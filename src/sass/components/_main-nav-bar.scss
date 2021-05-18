@@ -1,0 +1,19 @@
+@use "/src/sass/abstracts" as *;
+
+.main-nav-bar-container {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  background-color: $dark-background-color;
+  justify-content: center;
+  align-items: center;
+
+  .nav-link {
+    padding: 1rem;
+    margin: 0.5rem;
+
+    &:hover {
+      color: grey;
+    }
+  }
+}

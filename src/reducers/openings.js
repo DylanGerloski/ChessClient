@@ -20,7 +20,7 @@ export default (openings = initialState, action) => {
     case "CLEAR_VARIATIONS":
       return {
         ...openings,
-        variations: [],
+        variations: [{ name: "", eco: "", fen: "", moves: "", an: "" }],
       };
 
     default:

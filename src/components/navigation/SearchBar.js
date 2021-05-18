@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setOpeningName } from "../../actions/exploreOpenings/setOpeningName";
+import { setOpeningName } from "../../actions/eo_actions/setOpeningName";
 import { getVariations } from "../../actions/openings/getVariations.js";
 import Results from "./Results";
 const SearchBar = () => {

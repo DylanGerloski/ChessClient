@@ -1,0 +1,5 @@
+@use '/src/sass/abstracts' as *;
+
+.line-practice-container {
+  @include baseLayout;
+}

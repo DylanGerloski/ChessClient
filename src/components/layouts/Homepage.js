@@ -1,11 +1,10 @@
 import React from "react";
-import ChessBoard from "chessboardjsx";
-import HomePageNav from "../navigation/HomePageNav";
+
+import MainNavBar from "../navigation/MainNavBar";
 const HomePage = () => {
   return (
-    <div className='home-page-container'>
-      <ChessBoard position='start'></ChessBoard>
-      <HomePageNav></HomePageNav>
+    <div className="home-page-container">
+      <div className="home-page-body-container"></div>
     </div>
   );
 };

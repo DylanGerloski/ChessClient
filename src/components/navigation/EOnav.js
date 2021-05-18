@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SearchTree from "./SearchTree";
 import SearchBar from "./SearchBar";
 
-const ExploreOpeningNav = (props) => {
+const EOnav = (props) => {
   const [searchChoice, setSearchChoice] = useState("");
   const [display, setDisplay] = useState("nav");
   const renderSearchOption = () => {
@@ -36,4 +36,4 @@ const ExploreOpeningNav = (props) => {
   );
 };
 
-export default ExploreOpeningNav;
+export default EOnav;

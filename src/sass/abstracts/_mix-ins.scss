@@ -1,0 +1,7 @@
+@use 'variables' as *;
+
+@mixin baseLayout {
+  height: 90vh;
+  display: flex;
+  background-color: $light-background-color;
+}

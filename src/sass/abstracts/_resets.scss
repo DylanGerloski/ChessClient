@@ -1,0 +1,22 @@
+@use 'variables' as *;
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  color: $text-color;
+  text-align: center;
+  text-decoration: none;
+}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import volumes from "./volumeDescriptions.js";
 import { getVariations } from "../../actions/openings/getVariations.js";
-import { setOpeningName } from "../../actions/exploreOpenings/setOpeningName";
+import { setOpeningName } from "../../actions/eo_actions/setOpeningName";
 import Results from "./Results";
 
 const SearchTree = (props) => {

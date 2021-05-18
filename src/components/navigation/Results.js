@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
-import { setFen } from "../../actions/exploreOpenings/setFen";
-import { setOpeningName } from "../../actions/exploreOpenings/setOpeningName";
+import { setFen } from "../../actions/eo_actions/setFen";
+import { setOpeningName } from "../../actions/eo_actions/setOpeningName";
 import clearVariations from "../../actions/openings/clearVariations";
 const Results = (props) => {
   let key = 0;
@@ -17,9 +17,10 @@ const Results = (props) => {
     if (mainOpening.length === 0) {
       mainOpening.push(variations[0]);
     }
-    console.log(mainOpening);
+
     dispatch(setFen(mainOpening[0].fen));
   }, [variations]);
+
   key = 0;
   if (props.display === "results") {
     return (

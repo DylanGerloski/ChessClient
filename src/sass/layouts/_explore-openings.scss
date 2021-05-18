@@ -1,12 +1,8 @@
 @use '/src/sass/abstracts' as *;
 
-.explore-openings-container {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
+.eo-container {
+  @include baseLayout;
   justify-content: space-evenly;
-  background-color: $light-background-color;
-  z-index: -1;
 
   align-items: center;
   overflow: auto;
