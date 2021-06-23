@@ -6,12 +6,14 @@ import clearVariations from "../../actions/openings/clearVariations";
 import ChessBoard from "chessboardjsx";
 import EOboard from "../board_func/EOboard";
 import { getNames } from "../../actions/openings/getNames";
+import setDisplay from "../../actions/openings/setDsiplay";
 
 const EOlayout = (props) => {
   const dispatch1 = useDispatch();
 
   useEffect(() => {
     dispatch1(getNames());
+    dispatch1(setDisplay("EO"))
     return dispatch1(clearVariations());
   }, []);
 

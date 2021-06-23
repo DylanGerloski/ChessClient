@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { setOpeningName } from "../../actions/eo_actions/setOpeningName";
 import { getVariations } from "../../actions/openings/getVariations.js";
+import { setStartPosition } from "../../actions/lp_actions/setStartPostion";
+
 import Results from "./Results";
 const SearchBar = () => {
   const names = useSelector((reducer) => reducer.openings.mainOpenings);
+  const layout = useSelector((reducer) => reducer.openings.display);
+
   const [display, setDisplay] = useState("search-bar");
   const [val, setVal] = useState("");
   const dispatch = useDispatch();
@@ -41,6 +45,7 @@ const SearchBar = () => {
                   onClick={() => {
                     setClicked(true);
                     dispatch(setOpeningName(name.firstName));
+
                     dispatch(getVariations(name.firstName, name.eco)).then(
                       setDisplay("results")
                     );

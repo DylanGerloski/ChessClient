@@ -12,6 +12,7 @@ export const getVariations = (name, eco) => {
             fen: opening.fen,
             moves: opening.moves,
             an: opening.an,
+            hasCont: opening.hasCont,
           };
 
           variation.push(obj);

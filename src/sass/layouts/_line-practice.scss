@@ -1,5 +1,85 @@
 @use '/src/sass/abstracts' as *;
 
-.line-practice-container {
-  @include baseLayout;
+.lp-start-container {
+  background-color: $light-background-color;
+
+  overflow: hidden;
+  display: flex;
+  height: 90vh;
+  width: 100vw;
+
+  .lp-left-side {
+    width: 60%;
+    border-bottom: solid;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+  .lp-right-side {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
+
+    .move-box {
+      width: 50%;
+      height: 60%;
+      border: solid;
+    }
+
+    .final-position-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.lp-search-container {
+  background-color: $light-background-color;
+  padding-bottom: 50px;
+  overflow: hidden;
+  .lp-header {
+    height: 20vh;
+    width: 100%;
+    border-bottom: solid;
+  }
+  .lp-middle-section {
+    height: 50vh;
+    width: 100vw;
+    border-bottom: solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .start-heading {
+      width: 100%;
+    }
+    .start-search-container {
+      border: solid;
+      width: 400px;
+    }
+  }
+  .lp-bottom-section {
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .end-heading {
+      width: 100%;
+    }
+
+    .end-search-container {
+      border: solid;
+      width: 400px;
+      height: 250px;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: auto;
+    }
+  }
 }

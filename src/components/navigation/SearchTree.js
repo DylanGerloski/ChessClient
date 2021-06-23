@@ -10,7 +10,7 @@ const SearchTree = (props) => {
   const mainOpenings = useSelector((reducer) => reducer.openings.mainOpenings);
   const [openingNames, setName] = useState([]);
   const [display, setDisplay] = useState("search-tree");
-  console.log();
+
   const dispatch = useDispatch();
   const getCodeNames = (code) => {
     const indeces = [];
@@ -57,14 +57,14 @@ const SearchTree = (props) => {
   };
 
   const handleNextVolClick = () => {
-    if (volumeId != 4) {
+    if (volumeId !== 4) {
       setVolumeId(volumeId + 1);
       setName([]);
     }
   };
 
   const handlePreviousVolClick = () => {
-    if (volumeId != 0) {
+    if (volumeId !== 0) {
       setVolumeId(volumeId - 1);
       setName([]);
     }
@@ -72,10 +72,10 @@ const SearchTree = (props) => {
   let key = 0;
 
   const buttonToggleNext = {
-    display: volumeId != 4 ? "block" : "none",
+    display: volumeId !== 4 ? "block" : "none",
   };
   const buttonTogglePrevious = {
-    display: volumeId != 0 ? "block" : "none",
+    display: volumeId !== 0 ? "block" : "none",
   };
   if (display == "search-tree") {
     return (
@@ -106,16 +106,20 @@ const SearchTree = (props) => {
         <div className="volume-codes">
           {volumes[volumeId].codes.map((code) => {
             return (
-              <button
-                onClick={() => {
-                  setName(getCodeNames(code.code));
-                }}
+              <div
                 key={code.code}
-                className="code-container"
+                style={{ display: "flex", flexDirection: "column" }}
               >
-                <h4>{code.code}</h4>
+                <button
+                  onClick={() => {
+                    setName(getCodeNames(code.code));
+                  }}
+                  className="code-container"
+                >
+                  <h4>{code.code}</h4>
+                </button>
                 <p style={{ padding: "0.5rem" }}>{code.description}</p>
-              </button>
+              </div>
             );
           })}
         </div>

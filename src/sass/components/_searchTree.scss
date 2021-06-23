@@ -41,14 +41,9 @@
     border-bottom: solid;
 
     .code-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       text-align: center;
-      margin: 1rem;
-      min-width: 15%;
-      max-width: 30%;
+
+      margin: auto;
     }
   }
   .volume-code-openings {

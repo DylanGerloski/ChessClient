@@ -1,7 +1,4 @@
-const initialState = {
-  mainOpenings: [{ firstName: "", eco: "" }],
-  variations: [{ name: "", eco: "", fen: "", moves: "", an: "" }],
-};
+/* eslint-disable import/no-anonymous-default-export */
 
 export default (openings = initialState, action) => {
   switch (action.type) {
@@ -22,8 +19,21 @@ export default (openings = initialState, action) => {
         ...openings,
         variations: [{ name: "", eco: "", fen: "", moves: "", an: "" }],
       };
+    case "SET_DISPLAY":
+      return {
+        ...openings,
+        display: action.payload,
+      };
 
     default:
       return openings;
   }
+};
+
+const initialState = {
+  mainOpenings: [{ firstName: "", eco: "" }],
+  variations: [
+    { name: "", eco: "", fen: "", moves: "", an: "", hasCont: false },
+  ],
+  display: "",
 };

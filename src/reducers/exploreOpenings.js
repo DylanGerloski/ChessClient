@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 const initialState = { openingName: "", boardFen: "start" };
 
 export default (exploreOpenings = initialState, action) => {
